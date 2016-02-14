@@ -55,7 +55,6 @@ public class DataPoint extends Coordinate{
 	}
 	/**
 	 * Calculates the latitude and longitude of the intersection of two DataPoints.
-	 * 
 	 * @param pointA a {@link DataPoint}
 	 * @param pointB a {@link DataPoint}
 	 * @return a {@link Coordinate} of the intersection of pointA and pointB
@@ -64,7 +63,7 @@ public class DataPoint extends Coordinate{
 	 */
 	public static Coordinate triangulate(DataPoint pointA, DataPoint pointB) throws OutOfRangeException{
 		//Formula from http://www.movable-type.co.uk/scripts/latlong.html
-		if(pointA.equals(pointB)) throw new OutOfRangeException("Invalid input");
+		if(pointA.equals(pointB)) throw new OutOfRangeException("Unable to calulate an intersection");
 		
 		double latA = Math.toRadians(pointA.getLatitude());
 		double lonA = Math.toRadians(pointA.getLongitude());
@@ -100,7 +99,7 @@ public class DataPoint extends Coordinate{
 		
 		if( (Math.sin(alphaA) == 0 && Math.sin(alphaB) == 0) ||
 		    (Math.sin(alphaA) * Math.sin(alphaB) < 0))
-			throw new OutOfRangeException("Invalid input");
+			throw new OutOfRangeException("Unable to calulate an intersection");
 		
 		double alphaC = Math.acos( -1 * Math.cos(alphaA) * Math.cos(alphaB) + 
 				  				   Math.sin(alphaA) * Math.sin(alphaB) * Math.cos(deltaAB) );
@@ -117,10 +116,7 @@ public class DataPoint extends Coordinate{
 		
 		return new Coordinate(latCDeg, lonCDeg); 
 	}
-	/**
-	 * 
-	 * @return {@link DataPoint#bearing}
-	 */
+	/** @return {@link DataPoint#bearing}*/
 	public double getBearing(){
 		return bearing;
 	}

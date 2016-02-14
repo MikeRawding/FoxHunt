@@ -1,8 +1,9 @@
 package code;
 
 public class Main {
-	//TODO Main logic and UI
 	public static void main(String[] args){
-		System.out.println("Text from main");
+		Data d = new Data();
+		UI frame = new UI(d);
+		frame.setVisible(true);
 	}
 }

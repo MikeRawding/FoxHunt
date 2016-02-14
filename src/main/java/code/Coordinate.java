@@ -127,15 +127,11 @@ public class Coordinate {
 			return true;
 		return false;
 	}
-	/**
-	 * @return {@link Coordinate#latitude}
-	 */
+	/** @return {@link Coordinate#latitude}*/
 	public double getLatitude(){
 		return latitude;
 	}
-	/**
-	 * @return {@link Coordinate#longitude}
-	 */
+	/** @return {@link Coordinate#longitude}*/
 	public double getLongitude(){
 		return longitude;
 	}
