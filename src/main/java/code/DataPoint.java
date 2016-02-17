@@ -113,8 +113,11 @@ public class DataPoint extends Coordinate{
 		
 		double latCDeg = Math.toDegrees(latC);
 		double lonCDeg = (lonC > 0) ? Math.toDegrees(lonC) : Math.toDegrees(lonC) + 360;
-		
-		return new Coordinate(latCDeg, lonCDeg); 
+		try{
+			return new Coordinate(latCDeg, lonCDeg); 
+		}catch(OutOfRangeException e){
+			throw new OutOfRangeException("Cannot calculate intersection.");
+		}
 	}
 	/** @return {@link DataPoint#bearing}*/
 	public double getBearing(){

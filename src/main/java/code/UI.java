@@ -224,7 +224,6 @@ public class UI extends JFrame {
 				dataReference.setPointA(Double.parseDouble(latAField.getText()),
                                         Double.parseDouble(lonAField.getText()),
 			                            Double.parseDouble(bearAField.getText()));
-				
 				dataReference.setPointB(Double.parseDouble(latBField.getText()),
 								        Double.parseDouble(lonBField.getText()),
 			                            Double.parseDouble(bearBField.getText()));
