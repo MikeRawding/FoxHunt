@@ -35,8 +35,6 @@ public class TestBearing {
 	    double faultAB = Math.abs(calculatedBearingAB - expectedBearingAB);
 	    double faultBA = Math.abs(calculatedBearingBA - expectedBearingBA);
 	    
-	    System.out.println(calculatedBearingBA);
-	    
 	    assertTrue(faultAB < BEARING_TOLERANCE && faultBA < BEARING_TOLERANCE);
 	}
 }

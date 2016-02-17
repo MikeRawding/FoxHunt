@@ -111,8 +111,10 @@ public class DataPoint extends Coordinate{
 				                        Math.cos(deltaAC) - Math.sin(latA) * Math.sin(latC) );
 		double lonC = lonA + deltaLonAC;
 		
+		
 		double latCDeg = Math.toDegrees(latC);
-		double lonCDeg = (lonC > 0) ? Math.toDegrees(lonC) : Math.toDegrees(lonC) + 360;
+		double lonCDeg = Math.toDegrees(lonC);
+		
 		try{
 			return new Coordinate(latCDeg, lonCDeg); 
 		}catch(OutOfRangeException e){
