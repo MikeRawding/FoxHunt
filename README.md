@@ -11,6 +11,8 @@ an estimated location of the transmitter.
 
 As the user travels towards the transmitter, he may update his current position and receive updates on the distance and bearing to the transmitter.
 
+<a href="http://i.imgur.com/OgYASX2.png">Image of GUI</a>
+
 This program is written by <b>Mike Rawding</b> and designed to demonstrate:<br>
 <b>
 -Basic Java Skills<br>
